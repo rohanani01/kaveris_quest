@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kaveri's Quest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("{{ url_for('static', filename='images/background.png') }}");
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #333;
+            text-align: center;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Kaveri's Quest</h1>
+        <div class="game-container">
+            <div id="story-text">Kaveri stands at the entrance of a mysterious forest. What will she do? (enter/stay)</div>
+            <div id="options-container" class="input-container">
+                <div>
+                    <input type="radio" id="enter" name="option" value="enter">
+                    <label for="enter">Enter</label>
+                </div>
+                <div>
+                    <input type="radio" id="stay" name="option" value="stay">
+                    <label for="stay">Stay</label>
+                </div>
+            </div>
+            <button id="next-button">Next</button>
+            <button id="submit-button">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
